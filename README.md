@@ -1,3 +1,3 @@
 # simon-game
 Simon game project for FCC
-[CodePen Link](https://codepen.io/MikeIke/full/dzyxYP "Simon Game")
+<a href="https://codepen.io/MikeIke/full/dzyxYP" target="_blank" title="Simon Game">CodePen Link</a>
