@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="C:\Users\Nelms\Google Drive\Code\Projects\simon-game\build\css\main.css">
+</head>
+
+<body scroll="no">
+  <h1 class="title center">The Game of Simon</h1>
+  <div class="game-contain">
+    <div class="outer-circle">
+      <div class="inner-game">
+        <div class="color-buttons">
+          <div class="green btn" onclick="gameControls.btnClick(`green`)"></div>
+          <div class="red btn"></div>
+          <div class="yellow btn"></div>
+          <div class="blue btn"></div>
+        </div>
+        <div class="inner-circle-outline">
+          <div class="inner-circle">
+
+            <div class="name center">
+              Simon <span class="reg">&reg;</span>
+            </div>
+            <div class="inner-middle-row">
+              <div class="count-contain">
+                <div class="space"></div>
+                <div class="count-outer">
+                  <div class="count-inner">
+                    <div class="count-text">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="count-label label center">COUNT</div>
+              </div>
+              <div class="start-contain">
+                <div class="is-on start-light"></div>
+                <div class="action-btn">
+                  <div class="outer-btn">
+                    <div class="inner-btn start" onclick="startControls.startClick()"></div>
+                  </div>
+                </div>
+                <div class="start-label label center">START</div>
+              </div>
+              <div class="strict-contain">
+                <div class="is-on strict-light"></div>
+                <div class="action-btn">
+                  <div class="outer-btn">
+                    <div class="inner-btn strict" onclick="gameControls.strictClick()"></div>
+                  </div>
+                </div>
+                <div class="strict-label label center">STRICT</div>
+              </div>
+            </div>
+            <div class="on-off-contain">
+              <div class="on label center on-off">OFF</div>
+              <div class="switch-outside">
+                <div class="switch" onclick="switchControls.onToggle()">
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+              <div class="off label center on-off">ON</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="C:\Users\Nelms\Google Drive\Code\Projects\simon-game\build\js\script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>
