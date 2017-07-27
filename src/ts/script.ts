@@ -5,14 +5,14 @@ class GameLogic {
     constructor(strictMode: boolean) {
         this.strictMode = strictMode;
         this.chancesLeft = strictMode ? 0 : 1;
+        this.strictButtonLight = document.getElementsByClassName('strict-light'); 
     }
     gameReset() {
 
     }
     strictClick() {
-        console.log('t');
         if (switchControls.onSwitch) {
-            this.strictButtonLight = document.getElementsByClassName('strict-light');
+            changeCountText('0');
             if (!this.strictMode) {
                 this.strictMode = !this.strictMode;
                 this.strictButtonLight[0].style.filter = 'brightness(1.9)';
@@ -21,6 +21,9 @@ class GameLogic {
                 this.strictButtonLight[0].style.filter = 'brightness(0.6)';
             }
         }
+    }
+    btnClick(){
+        
     }
 
 }
@@ -60,7 +63,6 @@ class StartButtonLogic {
 function turningOffSequence() {
     if (startControls.startButtonLight) {
         startControls.startButtonLight[0].style.filter = 'brightness(0.6)';
-    } else if (gameControls.strictButtonLight) {
         gameControls.strictButtonLight[0].style.filter = 'brightness(0.6)';
     }
     removeClasses(['btn', 'inner-btn']);
@@ -98,4 +100,3 @@ function removeClasses(classNames: string[]) {
 let switchControls = new SwitchLogic();
 let startControls = new StartButtonLogic();
 let gameControls = new GameLogic(false);
-console.log(gameControls.strictMode, gameControls.chancesLeft);

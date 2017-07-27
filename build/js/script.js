@@ -2,13 +2,13 @@ var GameLogic = (function () {
     function GameLogic(strictMode) {
         this.strictMode = strictMode;
         this.chancesLeft = strictMode ? 0 : 1;
+        this.strictButtonLight = document.getElementsByClassName('strict-light');
     }
     GameLogic.prototype.gameReset = function () {
     };
     GameLogic.prototype.strictClick = function () {
-        console.log('t');
         if (switchControls.onSwitch) {
-            this.strictButtonLight = document.getElementsByClassName('strict-light');
+            changeCountText('0');
             if (!this.strictMode) {
                 this.strictMode = !this.strictMode;
                 this.strictButtonLight[0].style.filter = 'brightness(1.9)';
@@ -18,6 +18,8 @@ var GameLogic = (function () {
                 this.strictButtonLight[0].style.filter = 'brightness(0.6)';
             }
         }
+    };
+    GameLogic.prototype.btnClick = function () {
     };
     return GameLogic;
 }());
@@ -59,8 +61,6 @@ var StartButtonLogic = (function () {
 function turningOffSequence() {
     if (startControls.startButtonLight) {
         startControls.startButtonLight[0].style.filter = 'brightness(0.6)';
-    }
-    else if (gameControls.strictButtonLight) {
         gameControls.strictButtonLight[0].style.filter = 'brightness(0.6)';
     }
     removeClasses(['btn', 'inner-btn']);
@@ -93,4 +93,3 @@ function removeClasses(classNames) {
 var switchControls = new SwitchLogic();
 var startControls = new StartButtonLogic();
 var gameControls = new GameLogic(false);
-console.log(gameControls.strictMode, gameControls.chancesLeft);
