@@ -25,6 +25,7 @@ html {
   overflow: hidden;
   background: url('https://farm5.staticflickr.com/4326/35255839424_c902d16cc9_q.jpg');
   font-family: Ubuntu, 'sans-serif';
+  font-size:18px;
 }
 
 body {
@@ -66,11 +67,24 @@ body {
     position: relative;
     -webkit-filter: drop-shadow(0px 0px 2px #000);
     filter: drop-shadow(0px 0px 2px #000);
+    -webkit-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+box-shadow: inset 0px 0px 10px 2px rgba(0,0,0,0.5);
   }
   .btnH:hover {
     filter: brightness(1.7);
     cursor: pointer;
   }
+  .btnH:active {
+    filter: brightness(1.2);
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 14px 3px rgba(0,0,0,0.5);
+-moz-box-shadow: inset 0px 0px 14px 3px rgba(0,0,0,0.5);
+box-shadow: inset 0px 0px 14px 3px rgba(0,0,0,0.5);
+  }
+.btn-comp-click{
+  filter:brightness(1.7);
+}
   .green {
     background-color: #006411;
     border-radius: 100% 0 0 0;
@@ -224,6 +238,9 @@ body {
           left: 0.4rem;
           @include flex-center();
           justify-content: space-around;
+          -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.75);
           .line {
             width: 0.2rem;
             height: 80%;
